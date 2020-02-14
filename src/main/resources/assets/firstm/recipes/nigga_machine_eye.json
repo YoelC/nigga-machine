@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "firstm:nigga_machine"
+    },
+
+    {
+      "item": "minecraft:shears"
+    }
+  ],
+
+  "result": {
+    "item": "firstm:nigga_machine_eye",
+    "count": 2
+  }
+}

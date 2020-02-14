@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern": [
+    "NNN",
+    "NEN",
+    "N N"
+  ],
+
+
+  "key": {
+
+    "N": {
+      "item": "firstm:nigga_machine"
+    },
+
+    "E": {
+      "item": "firstm:nigga_machine_eye"
+    }
+
+
+  },
+
+  "result": {
+    "item": "firstm:nigga_machine_leggings",
+    "count": 1
+  }
+}

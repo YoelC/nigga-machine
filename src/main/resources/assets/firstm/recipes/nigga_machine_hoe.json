@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern": [
+    "NN",
+    " S",
+    " S"
+  ],
+
+  "key": {
+
+    "N": {
+      "item": "firstm:nigga_machine"
+    },
+
+    "S": {
+      "item": "firstm:nigga_machine_stick"
+    }
+
+  },
+
+  "result": {
+    "item": "firstm:nigga_machine_hoe",
+    "count": 1
+  }
+}
