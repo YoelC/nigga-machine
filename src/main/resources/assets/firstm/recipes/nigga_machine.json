@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "firstm:nigga_machine_block"
+    }
+  ],
+
+  "result": {
+    "item": "firstm:nigga_machine",
+    "count": 9
+  }
+}

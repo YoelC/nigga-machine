@@ -1,0 +1,16 @@
+[
+{
+  "modid": "firstm",
+  "name": "First Mod",
+  "description": "The first mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["YoelC"],
+  "credits": "Forge for making the developer interface!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
