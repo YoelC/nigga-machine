@@ -1,5 +1,7 @@
 #Items
 item.nigga_machine.name=Nigga Machine
+item.nigga_machine_sword.name=Nigga Machine Sword
+item.nigga_machine_stick.name=Nigga Machine Stick
 
 #Blocks
 tile.nigga_machine_block.name=Block of Nigga Machine

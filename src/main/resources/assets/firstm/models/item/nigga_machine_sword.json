@@ -1,0 +1,6 @@
+{
+  "parent": "Item/handheld",
+  "textures": {
+    "layer0": "firstm:items/nigga_machine_sword"
+  }
+}
