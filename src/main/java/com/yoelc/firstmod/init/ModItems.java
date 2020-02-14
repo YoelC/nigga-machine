@@ -1,9 +1,11 @@
 package com.yoelc.firstmod.init;
 
 import com.yoelc.firstmod.items.ItemBase;
+import com.yoelc.firstmod.items.tools.ToolSpade;
 import com.yoelc.firstmod.items.tools.ToolSword;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -22,6 +24,7 @@ public class ModItems {
 
     // Tools
     public static final ItemSword NIGGA_MACHINE_SWORD = new ToolSword("nigga_machine_sword", MATERIAL_NIGGA_MACHINE);
+    public static final ItemSpade NIGGA_MACHINE_SHOVEL = new ToolSpade("nigga_machine_shovel", MATERIAL_NIGGA_MACHINE);
 
 
 }
