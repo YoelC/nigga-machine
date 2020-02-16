@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern": [
+    " N",
+    "N "
+  ],
+
+  "key": {
+
+    "N": {
+      "item": "firstm:nigga_machine"
+    }
+
+  },
+
+  "result": {
+    "item": "firstm:nigga_machine_shears",
+    "count": 1
+  }
+}

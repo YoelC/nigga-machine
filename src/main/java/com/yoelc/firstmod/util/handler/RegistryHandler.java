@@ -2,6 +2,7 @@ package com.yoelc.firstmod.util.handler;
 
 import com.google.common.eventbus.Subscribe;
 import com.yoelc.firstmod.init.ModBlocks;
+import com.yoelc.firstmod.init.ModEntities;
 import com.yoelc.firstmod.init.ModItems;
 import com.yoelc.firstmod.util.IHasModel;
 import net.minecraft.block.Block;
@@ -13,6 +14,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @EventBusSubscriber
 public class RegistryHandler {
+
+    public static void preInitRegistries() {
+        ModEntities.registerEntities();
+    }
 
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {

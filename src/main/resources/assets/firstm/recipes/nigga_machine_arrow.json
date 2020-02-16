@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern": [
+    "N",
+    "S",
+    "F"
+  ],
+
+  "key": {
+
+    "N": {
+      "item": "firstm:nigga_machine"
+    },
+
+    "S": {
+      "item": "firstm:nigga_machine_stick"
+    },
+
+    "F": {
+      "item": "minecraft:feather"
+    }
+
+  },
+
+  "result": {
+    "item": "firstm:nigga_machine_arrow",
+    "count": 12
+  }
+}

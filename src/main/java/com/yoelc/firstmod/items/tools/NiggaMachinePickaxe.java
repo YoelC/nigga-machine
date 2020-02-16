@@ -4,15 +4,17 @@ import com.yoelc.firstmod.Main;
 import com.yoelc.firstmod.init.ModItems;
 import com.yoelc.firstmod.util.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemAxe;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemPickaxe;
 
-public class ToolAxe extends ItemAxe implements IHasModel {
+import static com.yoelc.firstmod.Main.NIGGA_MACHINE_TAB;
 
-    public ToolAxe(String name, ToolMaterial material)  {
-        super(material, 12.0f, -3.4f);
+public class NiggaMachinePickaxe extends ItemPickaxe implements IHasModel {
+    public NiggaMachinePickaxe(String name, Item.ToolMaterial material)  {
+        super(material);
         setUnlocalizedName(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.TOOLS);
+        setCreativeTab(NIGGA_MACHINE_TAB);
         ModItems.ITEMS.add(this);
     }
 
@@ -20,5 +22,4 @@ public class ToolAxe extends ItemAxe implements IHasModel {
     public void registerModels() {
         Main.proxy.registerItemRenderer(this, 0, "inventory");
     }
-
 }

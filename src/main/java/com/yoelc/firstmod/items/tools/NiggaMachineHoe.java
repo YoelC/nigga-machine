@@ -4,15 +4,17 @@ import com.yoelc.firstmod.Main;
 import com.yoelc.firstmod.init.ModItems;
 import com.yoelc.firstmod.util.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemSpade;
+import net.minecraft.item.ItemHoe;
 
-public class ToolSpade extends ItemSpade implements IHasModel {
+import static com.yoelc.firstmod.Main.NIGGA_MACHINE_TAB;
 
-    public ToolSpade(String name, ToolMaterial material)  {
+public class NiggaMachineHoe extends ItemHoe implements IHasModel {
+
+    public NiggaMachineHoe(String name, ToolMaterial material)  {
         super(material);
         setUnlocalizedName(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.TOOLS);
+        setCreativeTab(NIGGA_MACHINE_TAB);
         ModItems.ITEMS.add(this);
     }
 

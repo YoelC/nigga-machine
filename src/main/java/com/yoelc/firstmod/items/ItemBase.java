@@ -6,12 +6,14 @@ import com.yoelc.firstmod.util.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
+import static com.yoelc.firstmod.Main.NIGGA_MACHINE_TAB;
+
 public class ItemBase extends Item implements IHasModel {
 
     public ItemBase(String name) {
         setUnlocalizedName(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.MATERIALS);
+        setCreativeTab(NIGGA_MACHINE_TAB);
         ModItems.ITEMS.add(this);
     }
 

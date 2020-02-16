@@ -8,6 +8,7 @@ public class Reference {
     public static final String CLIENT_PROXY_CLASS = "com.yoelc.firstmod.proxy.ClientProxy";
     public static final String COMMON_PROXY_CLASS = "com.yoelc.firstmod.proxy.CommonProxy";
 
+    public static final int ENTITY_NIGGA_MACHINE = 120;
 
 
 }

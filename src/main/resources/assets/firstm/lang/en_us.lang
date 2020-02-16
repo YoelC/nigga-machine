@@ -2,6 +2,7 @@
 item.nigga_machine.name=Nigga Machine
 item.nigga_machine_eye.name=Eye of Nigga Machine
 item.nigga_machine_stick.name=Nigga Machine Stick
+item.nigga_machine_arrow.name=Nigga Machine Arrow
 
 # Tools
 item.nigga_machine_sword.name=Nigga Machine Sword
@@ -9,6 +10,8 @@ item.nigga_machine_shovel.name=Nigga Machine Shovel
 item.nigga_machine_axe.name=Nigga Machine Axe
 item.nigga_machine_pickaxe.name=Nigga Machine Pickaxe
 item.nigga_machine_hoe.name=Nigga Machine Hoe
+item.nigga_machine_shears.name=Nigga Machine Shears
+item.nigga_machine_bow.name=Nigga Machine Bow
 
 # Blocks
 tile.nigga_machine_block.name=Block of Nigga Machine
@@ -19,3 +22,12 @@ item.nigga_machine_helmet.name=Nigga Machine Helmet
 item.nigga_machine_chestplate.name=Nigga Machine Chestplate
 item.nigga_machine_leggings.name=Nigga Machine Leggings
 item.nigga_machine_boots.name=Nigga Machine Boots
+
+# Food
+item.cooked_nigga_machine.name=Deep Fried Nigga Machine
+
+# Tab
+itemGroup.nigga_machine_tab=Nigga Machine Mod
+
+# Entities
+entity.nigga_machine.name=Nigga Machine

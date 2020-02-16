@@ -1,0 +1,6 @@
+{
+    "parent": "Item/generated",
+    "textures": {
+        "layer0": "firstm:items/cooked_nigga_machine"
+    }
+}

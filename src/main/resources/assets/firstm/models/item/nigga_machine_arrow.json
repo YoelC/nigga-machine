@@ -1,0 +1,6 @@
+{
+    "parent": "Item/generated",
+    "textures": {
+        "layer0": "firstm:items/nigga_machine_arrow "
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "firstm:item/nigga_machine_bow",
+  "textures": {
+    "layer0": "firstm:items/nigga_machine_bow_pulling_2"
+  }
+}
