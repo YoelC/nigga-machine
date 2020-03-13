@@ -1,13 +1,13 @@
 package com.yoelc.firstmod;
 
 import com.yoelc.firstmod.init.ModRecipes;
+import com.yoelc.firstmod.proxy.ClientProxy;
 import com.yoelc.firstmod.proxy.CommonProxy;
 import com.yoelc.firstmod.tabs.NiggaMachineTab;
 import com.yoelc.firstmod.util.Reference;
 import com.yoelc.firstmod.util.handler.RegistryHandler;
 import com.yoelc.firstmod.util.handler.RenderHandler;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -32,6 +32,7 @@ public class Main {
     public static void PreInit(FMLPreInitializationEvent event) {
         RegistryHandler.preInitRegistries();
         RenderHandler.registerEntityRenders();
+        ClientProxy.registerBusEvents();
     }
 
     @EventHandler

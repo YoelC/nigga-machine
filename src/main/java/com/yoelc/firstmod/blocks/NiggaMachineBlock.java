@@ -9,7 +9,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.storage.loot.ILootContainer;
 
 public class NiggaMachineBlock extends BlockBase {
-
     public NiggaMachineBlock(String name, Material material) {
         super(name, material);
 
@@ -17,6 +16,7 @@ public class NiggaMachineBlock extends BlockBase {
         setHardness(10.0f);
         setResistance(300.0f);
         setHarvestLevel("pickaxe", 3);
+
     }
 
 }

@@ -1,11 +1,13 @@
 package com.yoelc.firstmod.entity;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntitySkeleton;
+import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -50,6 +52,24 @@ public class EntityNiggaMachine extends EntityCow {
 
     }
 
+    protected EntityNiggaMachine createInstance()
+    {
+        return new EntityNiggaMachine(this.world);
+    }
+
+    public void duplicate() {
+        for(int i = 0; i < 2; i++) {
+            EntityNiggaMachine niggaMachineSon = this.createInstance();
+            niggaMachineSon.setLocationAndAngles(this.posX, this.posY + 0.5D, this.posZ, this.rand.nextFloat() * 360.0F, 0.0F);
+            this.world.spawnEntity(niggaMachineSon);
+        }
+    }
+
+    @Override
+    public void onDeath(DamageSource cause) {
+        super.onDeath(cause);
+    }
+
     @Override
     public EntityCow createChild(EntityAgeable ageable) {
         return new EntityNiggaMachine(world);
@@ -76,6 +96,4 @@ public class EntityNiggaMachine extends EntityCow {
     {
         this.playSound(SoundEvents.ENTITY_ENDERMEN_SCREAM, 0.5F, 1.0F);
     }
-
-
 }
