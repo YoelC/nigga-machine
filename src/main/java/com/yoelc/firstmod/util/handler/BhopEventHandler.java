@@ -111,11 +111,5 @@ public class BhopEventHandler {
 
         return accelerate(event, groundAccel, groundMax);
     }
-
-    @SubscribeEvent
-    public void onPlayerJump(LivingEvent.LivingJumpEvent event) {
-        EntityPlayer player = Minecraft.getMinecraft().player;
-        if(event.getEntity() == player) {
-        }
-    }
+    
 }
