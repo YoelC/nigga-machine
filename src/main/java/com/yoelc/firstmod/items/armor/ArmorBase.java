@@ -3,7 +3,6 @@ package com.yoelc.firstmod.items.armor;
 import com.yoelc.firstmod.Main;
 import com.yoelc.firstmod.init.ModItems;
 import com.yoelc.firstmod.util.IHasModel;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 

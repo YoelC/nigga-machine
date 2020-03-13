@@ -3,19 +3,8 @@ package com.yoelc.firstmod.items.tools;
 import com.yoelc.firstmod.Main;
 import com.yoelc.firstmod.init.ModItems;
 import com.yoelc.firstmod.util.IHasModel;
-import net.minecraft.client.Minecraft;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemFlintAndSteel;
 import net.minecraft.item.ItemShears;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumHand;
-import net.minecraft.world.World;
-
-import javax.annotation.Nullable;
 
 import static com.yoelc.firstmod.Main.NIGGA_MACHINE_TAB;
 

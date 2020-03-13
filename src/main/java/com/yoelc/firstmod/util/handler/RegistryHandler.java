@@ -1,6 +1,5 @@
 package com.yoelc.firstmod.util.handler;
 
-import com.google.common.eventbus.Subscribe;
 import com.yoelc.firstmod.init.ModBlocks;
 import com.yoelc.firstmod.init.ModEntities;
 import com.yoelc.firstmod.init.ModItems;
@@ -9,10 +8,8 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 @EventBusSubscriber
 public class RegistryHandler {

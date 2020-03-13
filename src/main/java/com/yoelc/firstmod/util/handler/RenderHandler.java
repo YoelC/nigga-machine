@@ -7,8 +7,6 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
-import javax.swing.text.html.parser.Entity;
-
 public class RenderHandler {
     public static void registerEntityRenders() {
         RenderingRegistry.registerEntityRenderingHandler(EntityNiggaMachine.class, new IRenderFactory<EntityNiggaMachine>() {

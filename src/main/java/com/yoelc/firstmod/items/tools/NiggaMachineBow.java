@@ -4,20 +4,11 @@ import com.yoelc.firstmod.Main;
 import com.yoelc.firstmod.init.ModItems;
 import com.yoelc.firstmod.items.special.NiggaMachineArrow;
 import com.yoelc.firstmod.util.IHasModel;
-import net.minecraft.client.Minecraft;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
-import net.minecraft.item.ItemArrow;
-import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import static com.yoelc.firstmod.Main.NIGGA_MACHINE_TAB;
 

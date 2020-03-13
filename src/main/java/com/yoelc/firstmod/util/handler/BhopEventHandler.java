@@ -1,19 +1,10 @@
 package com.yoelc.firstmod.util.handler;
 
 import com.yoelc.firstmod.math.Vector2D;
-import com.yoelc.firstmod.proxy.ClientProxy;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.InputEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import org.lwjgl.input.Keyboard;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.KeyEvent;
 
 import static java.lang.Math.max;
 
@@ -111,5 +102,5 @@ public class BhopEventHandler {
 
         return accelerate(event, groundAccel, groundMax);
     }
-    
+
 }

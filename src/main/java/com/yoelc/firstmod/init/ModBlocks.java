@@ -1,6 +1,5 @@
 package com.yoelc.firstmod.init;
 
-import com.yoelc.firstmod.blocks.BlockBase;
 import com.yoelc.firstmod.blocks.NiggaMachineBlock;
 import com.yoelc.firstmod.blocks.NiggaMachineOre;
 import net.minecraft.block.Block;
