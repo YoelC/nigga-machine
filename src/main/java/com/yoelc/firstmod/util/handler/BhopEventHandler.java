@@ -1,6 +1,7 @@
 package com.yoelc.firstmod.util.handler;
 
 import com.yoelc.firstmod.math.Vector2D;
+import com.yoelc.firstmod.math.Vector3D;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -11,14 +12,14 @@ import static java.lang.Math.max;
 public class BhopEventHandler {
 
     public boolean onGroundLastTick = false;
-    public float airAccel = 15f;
-    public float airMax = 0.1f;
-    public float groundMax = 0.3f;
-    public float friction = 0.8f;
+    public float airAccel = 1f;
+    public float airMax = 0.01f;
+    public float groundMax = 0.03f;
+    public float friction = 0.4f;
     public float groundAccel = 0.13f;
 
-    public Vector2D vel = new Vector2D();
-    public Vector2D prevVel = new Vector2D();
+    public Vector3D vel = new Vector3D();
+    public Vector3D prevVel = new Vector3D();
     public boolean jumping = false;
 
     @SubscribeEvent
@@ -26,26 +27,26 @@ public class BhopEventHandler {
 
         // Auto Bhop
         jumping = Keyboard.isKeyDown(Keyboard.KEY_SPACE);
-        if (jumping && event.player.onGround) {
+        if (jumping && event.player.onGround)  {
             event.player.jump();
         }
 
         if (event.phase == TickEvent.Phase.START && event.side == Side.CLIENT) {
             vel.x = prevVel.x;
-            vel.y = prevVel.y;
+            vel.z = prevVel.z;
 
-            Vector2D newVel;
+            vel = calculateFriction(event);
 
             if (getOnGround(event)) {
-                newVel = moveGround(event);
+                vel = vel.add(moveGround(event));
             } else {
-                newVel = moveAir(event);
+                vel = vel.add(moveAir(event));
             }
 
-            event.player.motionX = newVel.x;
-            event.player.motionZ = newVel.y;
-            prevVel.x = newVel.x;
-            prevVel.y = newVel.y;
+            event.player.motionX = vel.x / 5;
+            event.player.motionZ = vel.z / 5;
+            prevVel.x = vel.x;
+            prevVel.z = vel.z;
         }
     }
 
@@ -69,37 +70,37 @@ public class BhopEventHandler {
         return false;
     }
 
-    public Vector2D getWishvel(TickEvent.PlayerTickEvent event) {
-        float angle = (float) (event.player.rotationYaw);
-        Vector2D wishpos = new Vector2D(event.player.moveStrafing, event.player.moveForward).rotate(angle * (3.14159f / 180f));
-        return wishpos;
-    }
-
-    public Vector2D accelerate(TickEvent.PlayerTickEvent event, float accelerate, float maxVel) {
-        Vector2D wishpos = getWishvel(event);
-        float projVel = vel.dotProduct(wishpos);
-
-        float accelVel = accelerate;
-
-        if (accelerate + projVel > maxVel) {
-            accelVel = maxVel - projVel;
+    public Vector3D calculateFriction(TickEvent.PlayerTickEvent event) {
+        if (getOnGround(event)) {
+            vel = vel.scale(friction);
         }
-
-
-        return vel.add(wishpos.scale(accelVel));
+        return vel;
     }
 
-    public Vector2D moveAir(TickEvent.PlayerTickEvent event) {
+    public Vector3D getWishvel(TickEvent.PlayerTickEvent event) {
+        Vector3D wishvel = new Vector3D(event.player.moveForward, 0f, event.player.moveStrafing).rotateY((event.player.rotationYaw) * (3.14159f / 180f));
+        float temp = wishvel.x;
+        wishvel.x = wishvel.z;
+        wishvel.z = temp;
+        return wishvel;
+
+    }
+
+    public Vector3D accelerate(TickEvent.PlayerTickEvent event, float accelerate, float maxVel) {
+        Vector3D wishvel = getWishvel(event);
+        float max = Math.max(0, 1 - vel.length() / maxVel);
+        System.out.println(max);
+        float projVel = vel.dot(wishvel);
+        Vector3D scaledWishvel = wishvel.scale(max);
+        return wishvel.lerp(scaledWishvel, projVel);
+    }
+
+    public Vector3D moveAir(TickEvent.PlayerTickEvent event) {
         return accelerate(event, airAccel, airMax);
+
     }
 
-    public Vector2D moveGround(TickEvent.PlayerTickEvent event) {
-        float speed = vel.length();
-        if (speed != 0) {
-            float drop = speed * friction;
-            vel = vel.scale(max(speed - drop, 0) / speed);
-        }
-
+    public Vector3D moveGround(TickEvent.PlayerTickEvent event) {
         return accelerate(event, groundAccel, groundMax);
     }
 

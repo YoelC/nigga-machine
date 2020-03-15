@@ -1,12 +1,18 @@
 package com.yoelc.firstmod.math;
 
-class Vector3D {
+public class Vector3D {
     public float x, y, z;
 
     public Vector3D(float x, float y, float z) {
         this.x = x;
         this.y = y;
         this.z = z;
+    }
+
+    public Vector3D() {
+        this.x = 0;
+        this.y = 0;
+        this.z = 0;
     }
 
     public float length() {
@@ -46,7 +52,7 @@ class Vector3D {
 
     }
 
-    public static Vector3D lerp(Vector3D a, Vector3D b, float t)
+    public Vector3D lerp(Vector3D b, float t)
     {
         if (t < 0) {
             t = 0.0f;
@@ -55,9 +61,9 @@ class Vector3D {
         }
 
         return new Vector3D(
-                a.x + (b.x - a.x) * t,
-                a.y + (b.y - a.y) * t,
-                a.z + (b.z - a.z) * t
+                this.x + (b.x - this.x) * t,
+                this.y + (b.y - this.y) * t,
+                this.z + (b.z - this.z) * t
         );
     }
 
